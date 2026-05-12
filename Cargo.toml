@@ -1,0 +1,25 @@
+[package]
+name = "asset"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7", features = ["multipart"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["full"] }
+aws-sdk-s3 = "1"
+aws-config = "1"
+uuid = { version = "1", features = ["v4"] }
+bytes = "1"
+mime = "0.3"
+thiserror = "1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+dotenvy = "0.15.7"
+image = { version = "0.25", features = ["avif"] }
+mongodb = "3.1.0"
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+

@@ -1,0 +1,7 @@
+target
+.git
+.idea
+.cargo
+.env*
+docker.sh
+docker-compose.yml

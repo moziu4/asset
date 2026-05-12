@@ -1,0 +1,21 @@
+
+services:
+
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio_service
+    ports:
+      - "9000:9000"
+      - "9001:9001" # Puerto del dashboard
+    environment:
+      - MINIO_ACCESS_KEY=minio_access
+      - MINIO_SECRET_KEY=minio_secret
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+
+volumes:
+  minio_data:
+  mongo_data:
+  nats_data:
